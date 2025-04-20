@@ -8,7 +8,7 @@
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   line-height: 1.6;
-  background-color: #1a1a1a;
+  background-color: #121212;
   min-height: 100vh;
   padding: 2rem 1rem;
 }
@@ -17,7 +17,7 @@ body {
   max-width: 1000px;
   margin: 0 auto;
   padding: 2rem;
-  background-color: #2d2d2d;
+  background-color: #1e1e1e;
   border-radius: 16px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
 }
@@ -28,6 +28,11 @@ body {
   font-size: 2.25rem;
   font-weight: 700;
   margin-bottom: 2.5rem;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
 }
 
 /* Form styles */
@@ -47,7 +52,7 @@ body {
 label {
   display: block;
   margin-bottom: 0.5rem;
-  color: #e0e0e0;
+  color: #ffffff;
   font-weight: 500;
 }
 
@@ -71,7 +76,7 @@ input:focus {
 }
 
 button {
-  background-color: #3b82f6;
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
   color: white;
   padding: 0.75rem 1.5rem;
   border: none;
@@ -81,9 +86,13 @@ button {
   font-size: 1rem;
   font-weight: 500;
   transition: all 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 button:hover {
+  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
   background-color: #2563eb;
   transform: translateY(-1px);
 }
@@ -99,11 +108,11 @@ button:hover {
 .summary-item {
   text-align: center;
   padding: 1.5rem;
-  background-color: #383838;
+  background: linear-gradient(145deg, #3b82f6, #10b981);
   border-radius: 12px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  border: 1px solid #4a4a4a;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: none;
 }
 
 .summary-item:hover {
@@ -112,7 +121,7 @@ button:hover {
 }
 
 .summary-item h3 {
-  color: #e0e0e0;
+  color: #ffffff;
   font-size: 1.125rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
@@ -138,14 +147,16 @@ button:hover {
   justify-content: space-between;
   align-items: center;
   padding: 1.25rem;
-  background-color: #2d2d2d;
+  background: linear-gradient(145deg, #f9fafb, #ffffff);
   border-radius: 10px;
   transition: all 0.2s ease;
   border-left: 4px solid transparent;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .expense-info h3 {
-  color: #e0e0e0;
+  color: #333333;
   font-size: 1.125rem;
   font-weight: 500;
   margin-bottom: 0.25rem;
@@ -171,11 +182,11 @@ button:hover {
 
 .expense-item:hover {
   transform: translateX(4px);
-  background-color: #f3f4f6;
+  background-color: #404040;
 }
 
 .expense-info h3 {
-  color: #1a1a1a;
+  color: #ffffff;
   font-size: 1.125rem;
   font-weight: 500;
   margin-bottom: 0.25rem;
