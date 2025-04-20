@@ -1,0 +1,256 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  background-color: #1a1a1a;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+
+.app-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #2d2d2d;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+.app-title {
+  text-align: center;
+  color: #ffffff;
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+}
+
+/* Form styles */
+.expense-form {
+  background-color: #383838;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border: 1px solid #4a4a4a;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #e0e0e0;
+  font-weight: 500;
+}
+
+.form-select,
+input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #4a4a4a;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #2d2d2d;
+  color: #ffffff;
+  transition: border-color 0.15s ease-in-out;
+}
+
+.form-select:focus,
+input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+button {
+  background-color: #3b82f6;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background-color: #2563eb;
+  transform: translateY(-1px);
+}
+
+/* Summary styles */
+.expense-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.summary-item {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #383838;
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border: 1px solid #4a4a4a;
+}
+
+.summary-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+.summary-item h3 {
+  color: #e0e0e0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.expense-list {
+  background-color: #383838;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border: 1px solid #4a4a4a;
+}
+
+.expense-list h2 {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.expense-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem;
+  background-color: #2d2d2d;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  border-left: 4px solid transparent;
+}
+
+.expense-info h3 {
+  color: #e0e0e0;
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.expense-date {
+  color: #9ca3af;
+  font-size: 0.875rem;
+}
+
+.expense-item:hover {
+  transform: translateX(4px);
+  background-color: #404040;
+}
+
+.expense-item.expense {
+  border-left-color: #dc2626;
+}
+
+.expense-item.income {
+  border-left-color: #059669;
+}
+
+.expense-item:hover {
+  transform: translateX(4px);
+  background-color: #f3f4f6;
+}
+
+.expense-info h3 {
+  color: #1a1a1a;
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.expense-date {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.amount-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #dc2626;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.25rem;
+  width: auto;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.delete-btn:hover {
+  opacity: 1;
+  background: none;
+  transform: none;
+}
+
+.no-expenses {
+  text-align: center;
+  color: #6b7280;
+  padding: 2rem;
+  font-size: 1.125rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+
+  .app-container {
+    padding: 1.5rem;
+  }
+
+  .expense-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .expense-form,
+  .expense-list {
+    padding: 1.5rem;
+  }
+
+  .app-title {
+    font-size: 1.875rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .expense-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .amount-section {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
